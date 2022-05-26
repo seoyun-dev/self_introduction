@@ -3,7 +3,12 @@ body {
     font-family: 'Gowun Batang', serif;
 }
 nav {
-    position: fixed;
+    position: fixed; /*상단 고정*/
+    display: flex; 
+    flex-direction: row;
+    /*nav바 flex 구성 - 2개 박스(logo, item)로 구성*/
+    justify-content: space-between;
+    /*logo와 item 사이 거리 띄우기*/
     top: 0;
     width: 100%;
     height: 4vh;
@@ -11,16 +16,28 @@ nav {
     background-color: transparent;
     text-align: center;
 }
+nav logo {
+    margin-left: 3vh;
+    font-size: 2.8vh;
+    font-weight: 600;
+    color: orange;
+    background-color: rgb(255, 255, 255);
+}
 nav a{
     text-decoration: none;
     font-size: 2.8vh;
     font-weight: 600;
-    padding-left: 10vh;
-    padding-right: 10vh;
+    padding-right: 3vh;
 }
 nav a:hover{
     text-decoration: underline;
 }
+@media(max-width: 720px) {
+
+}
+/*반응형 적용 - 720px이하시 a태그 세로로*/
+
+/*----------------------------------------*/
 .container {
     display: flex;
     flex-direction: column;
