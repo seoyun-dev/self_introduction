@@ -32,9 +32,9 @@ nav a{
 nav a:hover{
     text-decoration: underline;
 }
-/*@media(max-width: 720px) {
+@media(max-width: 720px) {
 
-}*/
+}
 /*반응형 적용 - 720px이하시 a태그 세로로*/
 
 /*----------------------------------------*/
