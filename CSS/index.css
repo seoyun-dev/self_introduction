@@ -9,34 +9,36 @@ nav {
     /*nav바 flex 구성 - 2개 박스(logo, item)로 구성*/
     justify-content: space-between;
     /*logo와 item 사이 거리 띄우기*/
+    align-items: center;
     top: 0;
     width: 100%;
     height: 4vh;
     padding-top: 7px;
-    background-color: transparent;
-    text-align: center;
+    padding-bottom: 7px;
+    background-color: ivory;
 }
 nav logo {
     margin-left: 3vh;
-    font-size: 2.8vh;
+    font-size: 3.4vh;
     font-weight: 600;
     color: orange;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    padding-right: 1vh;
 }
-nav a{
+.nav__menu a{
     text-decoration: none;
-    font-size: 2.8vh;
+    font-size: 3vh;
     font-weight: 600;
     padding-right: 3vh;
 }
-nav a:hover{
+.nav__menu a:hover{
     text-decoration: underline;
 }
-@media(max-width: 720px) {
-
+.nav__toggleBtn { /*직속자식만. 즉, 토글버튼*/
+    font-size: 130%;
+    color: black;
+    display: none; /*화면이 720px 이하일때만*/
 }
-/*반응형 적용 - 720px이하시 a태그 세로로*/
-
 /*----------------------------------------*/
 .container {
     display: flex;
@@ -89,6 +91,8 @@ nav a:hover{
     background-color: #4631af;
     color: white;
     margin-bottom: 0;
+    margin-top: 14px;
+    /*4vh초과한  nav바의 padding 14px*/
 }
 .container__me__content {
     height: 100%;
@@ -131,10 +135,12 @@ li {
     text-align: center;
     background-color: skyblue;
     margin-bottom: 0;
+    margin-top: 14px;
+    /*4vh초과한  nav바의 padding 14px*/
 }
 .container__contact__call-pic {
-    margin-top: 90px;
-    margin-bottom: 70px;
+    margin-top: 10vh;
+    margin-bottom: 6vh;
     width: 30%;
     border-radius: 60%;
     margin-left: auto;
@@ -155,7 +161,7 @@ li {
     padding-right: 40px;
 }
 .container__contact__contact-list img {
-    margin-top: 60px;
+    margin-top: 6vh;
     width: 9vh;
 }
 .container__contact__contact-list a:hover img {
@@ -163,3 +169,48 @@ li {
     /*부드럽게 확대*/
     transform: scale(1.2);
 } /*마우스 오버시 img 확대*/ 
+
+/*반응형 적용 - 720px이하시 a태그 세로로*/
+@media(max-width: 720px) {
+    /*특정 px이하 메뉴 세로 배치*/
+    nav {
+        flex-direction: column;
+        padding-bottom: 10px;
+        /*nav 내부의 logo와 item을 세로 정렬*/
+    }
+    nav logo {
+        margin: 0;
+        padding-right: 0;
+    }
+    nav item {
+        display: flex;
+        flex-direction: column;
+        background-color: ivory;
+
+        /*item 내부의 a태그들을 세로 정렬*/
+        width: 100%;
+        padding-top: 1vh;
+        align-items: center/*가로중앙정렬*/;
+    }
+    .nav__menu a {
+        padding-bottom: 1vh;
+        padding-right: 0;
+    }
+    .container__home, .container__me, .container__contact {
+        padding-top: 21vh;
+        height: 79vh;
+    }
+    .nav__toggleBtn {
+        display: block;
+        position: absolute;
+        /*가장 가까운 position 기준(nav바: fixed)으로 고정*/
+        top: 10px;
+        right: 13px;
+    }
+    .nav__menu {
+        display: none; /*toggleBtn 누르기 전에 보이지 않도록*/
+    }
+    .nav__menu.active {
+        display: flex;
+    }
+}

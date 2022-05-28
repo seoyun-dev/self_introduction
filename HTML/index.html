@@ -3,27 +3,32 @@
     <!--구글폰트-->
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
     <!-- favicon -->
-    <link href="img/tigre_icon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../img/tigre_icon.ico" rel="shortcut icon" type="image/x-icon">
     <meta charset="UTF-8">
+    <!---fontawesome 사용 위해-->
+    <script src="https://kit.fontawesome.com/937f975639.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seoyun_Park</title>
     <!--나중에 로드된 css파일이 가장 우선순위가 높다.
     그러므로 원하는 외부 css파일이 제대로 적용되기 위해선 head부분이 끝나기 직전 맨 마지막에 위치해야 한다!-->
+    <script src="../JavaScript/main.js" defer></script>
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
         <nav>
             <logo>
-                🐯 Seoyun_Park 
+                🐯
             </logo>
             <!--같은페이지 내 a name(for 클릭시 이동)-->
-            <item>
+            <item class="nav__menu">
                 <a href="#home" style="color: rgb(248, 180, 192);">Hello:]</a>
                 <a href="#me" style="color: rgb(169, 243, 59)">Who is she?</a>
                 <a href="#contact" style="color: skyblue">How to contact her?</a>
             </item>
-        </nav>
-
+            <a href="#" class="nav__toggleBtn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+            </nav>
     <div class="container"><a name="home"></a>
         <div class="container__home">
             <h1>🐯 Seoyun Park 🐯</h1>
