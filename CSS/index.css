@@ -172,7 +172,7 @@ li {
 
 .container__like img {
     width: 80%;
-    height: 1300px;
+    height: 400px;
     object-fit: cover;
     padding: 10px;
     border-radius: 20%;
@@ -279,8 +279,8 @@ li {
 }
 /*마우스 오버시 img 확대*/
 
-/*반응형 적용 - 4000px이하시 a태그 세로로*/
-@media(max-width: 4000px) {
+/*반응형 적용 - px이하시 a태그 세로로*/
+@media(max-width: 780px) {
 
     /*특정 px이하 메뉴 세로 배치*/
     nav {
