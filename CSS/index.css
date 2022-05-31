@@ -239,9 +239,10 @@ li {
 }
 
 .container__contact__call-pic {
-    margin-top: 10vh;
+    margin-top: 8vh;
     margin-bottom: 6vh;
-    width: 30%;
+    width: 40%;
+    height: 50%;
     border-radius: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -249,7 +250,7 @@ li {
 
 .container__contact__mail {
     text-align: center;
-    font-size: 2vh;
+    font-size: 3vh;
     color: black;
     font-weight: 600;
 }
