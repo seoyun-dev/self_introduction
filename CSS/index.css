@@ -232,18 +232,17 @@ li {
     align-items: center;
 }
 
-.container__like__grid div {
+.container__like__grid figure {
     text-align: center;
     position: relative;
     /*텍스트 사진 기준 위해. position*/
 }
 .container__like__grid__title {
-    margin: 0;
+    margin-left: 5%;
     /*텍스트 사진 기준 position 위해*/
     position: absolute;
     height: 35vh;
     width: 90%;
-    margin-left: 1.5vw;
     border-radius: 20%;
     /*img 규격 따라하기*/
     background: rgba(0, 2, 90, 0.4);
@@ -257,7 +256,7 @@ li {
     /*배경과 텍스트 투명도 지정*/
     opacity: 0; /*투명*/
 }
-.container__like__grid div:hover .container__like__grid__title {
+.container__like__grid figure:hover .container__like__grid__title {
     transition: opacity 0.5s; /*opacity가 0.5s동안 변화*/
     opacity: 1; /*원래의 설정값(불투명)*/
 }
