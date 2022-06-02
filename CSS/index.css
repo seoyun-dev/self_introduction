@@ -223,12 +223,13 @@ li {
 }
 
 .container__like__grid {
-    margin: 5vh;
+    height: 94vh;
+    margin: 1.5vw;
     /*img위 text를 absolute로 하기 위해*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /*repeat(3,1fr) = 1fr 1fr 1fr*/
-    grid-gap: 3vw;
+    grid-gap: 1vw;
     align-items: center;
 }
 
