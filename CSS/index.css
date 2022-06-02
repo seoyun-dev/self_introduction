@@ -57,12 +57,13 @@ nav logo a {
 }
 .aside_toTop {
     text-decoration: none;
-    display: fixed;
+    color: black;
+    font-size: 150%;
     /*브라우저 기준 위치*/
-    bottom: 10%;
-    right: 10%;
+    position: fixed;
+    bottom: 3vw;
+    right: 4vw;
 }
-
 /*----------------------------------------*/
 main {
     display: flex;
