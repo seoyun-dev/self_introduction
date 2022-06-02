@@ -55,9 +55,16 @@ nav logo a {
     display: none;
     /*화면이 720px 이하일때만*/
 }
+.aside_toTop {
+    text-decoration: none;
+    display: fixed;
+    /*브라우저 기준 위치*/
+    bottom: 10%;
+    right: 10%;
+}
 
 /*----------------------------------------*/
-.container {
+main {
     display: flex;
     flex-direction: column;
     /* 3단 웹페이지를 만들기 위해 flex */
@@ -86,7 +93,14 @@ nav logo a {
     /*사진과 정보 가로 가운데 정렬*/
 
 }
-
+.container__home h1 {
+    font-size: 5vh;
+    /*vh=viewport height
+    =현재 실행중인 스크린 크기에 맞춰 상대적 크기 반환
+    vw=viewport width
+    height=1000px일 때, 1vh는 10px*/
+    margin-bottom: 5vh;
+}
 #tiger {
     border-radius: 100%;
     width: 65vh;
@@ -94,19 +108,41 @@ nav logo a {
     /* padding-top으로 하면 padding까지
     border-radius 범위가 되므로 margin 선택 */
 }
-
-.container__home h1 {
-    font-size: 5vh;
-    /*vh=viewport height
-    =현재 실행중인 스크린 크기에 맞춰 상대적 크기 반환
-    vw=viewport width
-    height=1000px일 때, 1vh는 10px*/
-}
-
 .container__home p {
     font-size: 3vh;
     font-weight: 600;
     /*텍스트 굵기*/
+    white-space: nowrap;
+    color: transparent;
+    position: relative;
+    top: 5%;
+    left:21%;
+    transform: translate(-50%, -50%);
+}
+
+.container__home p::before {
+    content: '35기 여러분, 반갑습니다. 도전의 과정을 함께할 수 있게 되어 기쁩니다 :]';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    border-right: 1px solid black;
+    overflow: hidden;
+    animation: typing 9s steps(31) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
 }
 
 /*----------------------------------------*/
