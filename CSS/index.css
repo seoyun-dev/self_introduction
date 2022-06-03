@@ -109,20 +109,23 @@ main {
     /* padding-top으로 하면 padding까지
     border-radius 범위가 되므로 margin 선택 */
 }
-.container__home p {
+.container__home div {
     font-size: 3vh;
     font-weight: 600;
     /*텍스트 굵기*/
     white-space: nowrap;
+    /*white-space: 스페이스와 탭, 줄바꿈, 자동줄바꿈 처리 정하는 속성
+    nowrap: 연속 공백 줄바꿈을 하나의 공백으로, 가로 긴 줄 줄바꿈X */
     color: transparent;
+    /*투명하게. beacause p::before의 자리잡기용이기 때문*/
+    text-align: center;
+    margin-top: 4vh;
     position: relative;
-    top: 5%;
-    left:21%;
-    transform: translate(-50%, -50%);
+    /*p::before의 position_absolute의 기준이 되기 위해*/
 }
 
-.container__home p::before {
-    content: '35기 여러분, 반갑습니다. 도전의 과정을 함께할 수 있게 되어 기쁩니다 :]';
+.container__home div::before {
+    content: '35기 여러분, 반갑습니다. 도전의 과정을 함께할 수 있게 되어 기쁩니다 :] ';
     position: absolute;
     top: 0;
     left: 0;
@@ -131,14 +134,19 @@ main {
     color: black;
     border-right: 1px solid black;
     overflow: hidden;
-    animation: typing 9s steps(31) infinite;
+    animation: typing 10s steps(43) infinite; /*steps: 계단식으로 위치이동. 끊어지는 효과*/
+    /*animation: 애니메이션이름 1회시간 가속도 반복횟수*/
 }
 
+/* @keyframes: 애니메이션의 시작~종료까지 어떤 동작으로 실행할 건지 결정 */
 @keyframes typing {
     0% {
         width: 0%;
     }
-    50% {
+    45% {
+        width: 100%;
+    }
+    55% {
         width: 100%;
     }
     100% {
