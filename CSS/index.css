@@ -467,6 +467,7 @@ li {
     .container__contact__contact-list img {
         width: 15%; /* 항상 한 줄에 list 놓이도록 */
     }
-    
-    
+    .container__home #short {
+        font-size: 4vw;
+    }
 }
